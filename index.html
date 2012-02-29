@@ -1,0 +1,18 @@
+
+<html>
+	<script>	
+	function load() {
+		var video = document.getElementById('myVideo'); 
+		if (navigator.webkitGetUserMedia) {
+			navigator.webkitGetUserMedia('video', 
+				function(stream) { video.src = webkitURL.createObjectURL(stream); }, 
+				function(error) { alert('ERROR: ' + error.toString()); } );
+		} else {
+			alert('webkitGetUserMedia not supported');
+		}
+	}	
+	</script>
+	<body onload="load()">
+		<video autoplay="autoplay" id="myVideo" />
+	</body>
+</html>
