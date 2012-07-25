@@ -4,7 +4,7 @@
 	function load() {
 		var video = document.getElementById('myVideo'); 
 		if (navigator.webkitGetUserMedia) {
-			navigator.webkitGetUserMedia('video', 
+			navigator.webkitGetUserMedia({audio: true, video: true}, 
 				function(stream) { video.src = webkitURL.createObjectURL(stream); }, 
 				function(error) { alert('ERROR: ' + error.toString()); } );
 		} else {
