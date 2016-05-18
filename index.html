@@ -7,8 +7,7 @@
       // github supports https also. So forward all http requests to https
       // This is only work around as we don't have any control over github server. 
       // Otherwise redirection should happen in server not in client as it is not secure!
-      var host = "ekanna.github.io";
-      if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      if (window.location.protocol != "https:") {
         window.location.protocol = "https";
       }
     </script>
