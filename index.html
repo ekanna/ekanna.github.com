@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head><title>My WebRTC</title></head>
+  <head>
+    <title>My WebRTC</title>
+    <script>
+      var host = "ekanna.github.io";
+      if ((host == window.location.host) && (window.location.protocol != "https:")) {
+        window.location.protocol = "https";
+      }
+    </script>
+  </head>
   <body>
     <video autoplay></video>
  
