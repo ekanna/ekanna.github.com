@@ -18,7 +18,7 @@
     <script>
       navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-      var constraints = { audio: false, video: true, options: {mirror: true} };
+      var constraints = { audio: false, video: true, options: {muted: true, mirror: true} };
       var video = document.querySelector("video");
 
       function successCallback(stream) {
