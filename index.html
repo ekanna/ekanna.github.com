@@ -2,6 +2,13 @@
 <html>
   <head>
     <title>My WebRTC</title>
+    <style>
+      video {
+        position: absolute;
+        height: 100%;
+        transform: scale(-1, 1);
+      }
+    </style>
     <script>
       // camera access works only in https
       // github supports https also. So forward all http requests to https
@@ -18,7 +25,7 @@
     <script>
       navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-      var constraints = { audio: false, video: true, options: {muted: true, mirror: true}, elemId: 'localVideo' };
+      var constraints = { audio: false, video: true};
       var video = document.querySelector("video");
 
       function successCallback(stream) {
